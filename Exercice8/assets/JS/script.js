@@ -1,10 +1,15 @@
-document.getElementById('img')
-        .addEventListener("mouseenter" , function changeImg(){
-            document.getElementById("img").src="img/Chat.jpg"
-        });
+var img = document.getElementById('img');
 
-document.getElementById('img')
-        .addEventListener("mouseleave" , function changImgAgain(){
-            document.getElementById("img").src="img/Tigre.jpg"
-        });
+function changeImg(imgSource){
+    img.src = imgSource;
+}
+
+img.addEventListener("mouseenter" , function(){
+    changeImg("img/Chat.jpg")
+    });
+
+
+img.addEventListener("mouseleave" , function(){
+        changeImg("img/Tigre.jpg")
+    })
 
