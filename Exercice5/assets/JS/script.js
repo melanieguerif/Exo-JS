@@ -1,10 +1,13 @@
-var button = document
-    .getElementById('button')
-    .addEventListener('click', function modulo (){
+//Methode avec arguments
 
-        var firstNumber = document.getElementById('firstNumber').value;
-        var secondNumber = document.getElementById('secondNumber').value;
+function modulo(toto, tata){
+    return toto % tata
+}
 
-        alert('Reste de la division : ' + (firstNumber % secondNumber));
-    })
-    
+alert(modulo (10, 3));
+
+//Methode sans arguments
+
+document.getElementById('button').addEventListener('click', function modulo(){
+    alert('Reste de la division : ' + document.getElementById('firstNumber').value % document.getElementById('secondNumber').value)
+})
